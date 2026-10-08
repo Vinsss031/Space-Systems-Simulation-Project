@@ -19,6 +19,7 @@ matlab.settings
 # --- Simulink Specific ---
 # Simulation cache and temporary files
 assignment 1/slprj/
+assignment 2/slprj/
 *.slxc
 
 # Code generation folders (Embedded Coder / HDL Coder)
