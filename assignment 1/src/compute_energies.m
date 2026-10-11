@@ -9,10 +9,7 @@ function [E_elec, E_kin] = compute_energies(simout, RW)
                    RW.flywheel_inertia .* flywheel_omega.^2);
     
     % 2. Electrical Energy
-    voltage = simout.voltage1_4;
-    current = simout.current1_4;
-
-    P_elec = voltage.*current;
+    P_elec = simout.P_elec1_4;
     
     % Numerically integrate electrical power over time to get Joules
     E_elec = cumtrapz(t, P_elec);

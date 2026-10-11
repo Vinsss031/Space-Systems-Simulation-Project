@@ -1,4 +1,5 @@
 clear; close all; clc
+addpath(genpath("src\"))
 
 %%
 % Assignment 1 - Part 1
@@ -23,6 +24,11 @@ sim1out = sim("ferrucci299571_assign1_RW.slx");
 [E_elec, E_kin] = compute_energies(sim1out, RW);
 
 plot_assignment_results1(sim1out, E_elec, E_kin);
+
+
+%% Compute frequency of oscillations of ang velocity between flywheel and rotor
+
+[freq, pwd_peak_freq, pwd_max] = computing_freq(sim1out, RW);
 
 %% Part 1.2 simulation
 
